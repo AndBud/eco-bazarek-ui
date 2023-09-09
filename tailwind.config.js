@@ -2,7 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "bazarek-yellow-main": "var(--bazarek-yellow-main)",
+        "bazarek-brown-dark": "var(--bazarek-brown-dark)",
+        "bazarek-green-main": "var(--bazarek-green-main)",
+        "bazarek-grey-main": "var(--bazarek-grey-main)",
+      },
+    },
   },
   plugins: [],
 };

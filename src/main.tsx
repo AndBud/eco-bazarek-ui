@@ -3,7 +3,14 @@ import ReactDOM from "react-dom/client";
 import Root from "./Root.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { HomePage, AboutUsPage, ContactPage, ProductsPage } from "./pages";
+import {
+  HomePage,
+  AboutUsPage,
+  ContactPage,
+  ProductsPage,
+  TermsOfUsePage,
+} from "./pages";
+import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +32,14 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <ProductsPage />,
+      },
+      {
+        path: "/terms-of-use",
+        element: <TermsOfUsePage />,
+      },
+      {
+        path: "/privacy-policy",
+        element: <PrivacyPolicyPage />,
       },
     ],
   },

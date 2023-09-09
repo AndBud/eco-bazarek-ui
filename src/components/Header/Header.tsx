@@ -1,14 +1,14 @@
-import { NavItem } from "./NavItem";
+import "./Header.style.css";
+import { IconButtons } from "./IconButtons";
+import { Logo } from "./Logo";
+import { Navigation } from "./Navigation";
 
 export const Header = () => {
   return (
-    <header>
-      <ul>
-        <NavItem to={"/"}>Home</NavItem>
-        <NavItem to={"/about-us"}>O nas</NavItem>
-        <NavItem to={"/products"}>Produkty</NavItem>
-        <NavItem to={"/contact"}>Kontakt</NavItem>
-      </ul>
+    <header className="Header-root">
+      <Logo />
+      <Navigation />
+      <IconButtons />
     </header>
   );
 };
