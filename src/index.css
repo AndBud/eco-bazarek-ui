@@ -10,6 +10,7 @@
   --bazarek-green-main: #46aa42;
   --bazarek-yellow-main: #fcfe7f;
   --bazarek-grey-main: #464646;
+  --bazarek-gray-light: #707070;
 }
 
 @layer base {

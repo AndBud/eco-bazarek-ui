@@ -8,6 +8,7 @@ export default {
         "bazarek-brown-dark": "var(--bazarek-brown-dark)",
         "bazarek-green-main": "var(--bazarek-green-main)",
         "bazarek-grey-main": "var(--bazarek-grey-main)",
+        "bazarek-grey-light": "var(--bazarek-grey-light)",
       },
     },
   },
