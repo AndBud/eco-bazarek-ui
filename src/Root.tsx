@@ -9,6 +9,7 @@ function Root() {
     <>
       <HelmetProvider>
         <Header />
+        <div className="w-full h-[64px]" />
         <Outlet />
         <Footer />
       </HelmetProvider>

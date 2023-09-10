@@ -11,3 +11,31 @@
   --bazarek-yellow-main: #fcfe7f;
   --bazarek-grey-main: #464646;
 }
+
+@layer base {
+  html {
+    font-family: Roboto, system-ui, sans-serif;
+    font-weight: 400;
+    background-color: var(--bg-base);
+  }
+}
+
+.Loader-root {
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--bazarek-green-main);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
