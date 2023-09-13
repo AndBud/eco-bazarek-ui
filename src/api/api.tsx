@@ -8,14 +8,14 @@ export const subscribe = (email: string) =>
 export const contact = (
   name: string,
   email: string,
-  topic: string,
+  subject: string,
   phone?: string,
   message?: string
 ) =>
   wretch("https://api-eko-bazarek.azurewebsites.net/api/contact").post({
     name,
     email,
-    topic,
     phone,
+    subject,
     message,
   });

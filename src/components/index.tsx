@@ -5,3 +5,5 @@ export { TextField } from "./TextField";
 export { Button } from "./Button/Button";
 export { Loader } from "./Loader";
 export { Map } from "./Map/Map";
+export { Submit } from "./Submit";
+export { FloatingButton } from "./FloatingButton";
