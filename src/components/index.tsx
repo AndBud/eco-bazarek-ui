@@ -7,3 +7,4 @@ export { Loader } from "./Loader";
 export { Map } from "./Map/Map";
 export { Submit } from "./Submit";
 export { FloatingButton } from "./FloatingButton";
+export { Home } from "./Home/Home";

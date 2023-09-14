@@ -1,12 +1,11 @@
 import { toast } from "react-toastify";
-import { Content } from "../components";
+import { Content, Home } from "../components";
 
 export const HomePage = () => {
   const notify = () => toast("Wow so easy!", { type: "error" });
   return (
-    <Content title="Home page" loading={true}>
-      <button onClick={notify}>Notify!</button>
-      Home page
+    <Content title="Home page">
+      <Home />
     </Content>
   );
 };

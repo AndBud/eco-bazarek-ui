@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="flex flex-row items-end justify-center w-full h-min-[514px] bg-bazarek-brown-dark text-white p-4">
+    <footer className="flex flex-row items-end justify-center w-full h-min-[514px] bg-bazarek-brown-dark text-white p-4 z-20">
       <section className="flex flex-col items-center w-[1045px]">
         <EnvelopeIcon className="w-[80px] stroke-[1px]" />
         <div className="mt-6 text-2xl uppercase"> Subskrybuj</div>
