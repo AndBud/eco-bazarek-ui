@@ -11,6 +11,8 @@ import {
   TermsOfUsePage,
 } from "./pages";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage.tsx";
+import { ProfilePage } from "./pages/ProfilePage.tsx";
+import { NotFoundPage } from "./pages/NotFoundPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +43,8 @@ const router = createBrowserRouter([
         path: "/privacy-policy",
         element: <PrivacyPolicyPage />,
       },
+      { path: "/profile", element: <ProfilePage /> },
+      { path: "*", element: <NotFoundPage /> },
     ],
   },
 ]);

@@ -12,6 +12,7 @@
   --bazarek-grey-main: #464646;
   --bazarek-gray-light: #707070;
   --bazarek-border-light: #f2f2f2;
+  --bazarek-border-base: #f6f5f1;
 }
 
 @layer base {

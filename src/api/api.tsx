@@ -19,3 +19,25 @@ export const contact = (
     subject,
     message,
   });
+
+export const loginUser = (email: string, password: string) =>
+  wretch("https://api-eko-bazarek.azurewebsites.net/api/users/login").post({
+    email,
+    password,
+  });
+
+export const categoriesTop = () =>
+  wretch(
+    "https://api-eko-bazarek.azurewebsites.net/api/products/categories/top"
+  )
+    .get()
+    .json((json) => {
+      return json;
+    });
+
+export const productsList = () =>
+  wretch("https://api-eko-bazarek.azurewebsites.net/api/products")
+    .get()
+    .json((json) => {
+      return json;
+    });
