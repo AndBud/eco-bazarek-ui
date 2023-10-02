@@ -4,6 +4,7 @@ import "./Button.styles.css";
 
 export interface ButtonProps extends HtmlHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
+  type?: string;
   variant?: "contained" | "text" | "icon";
 }
 
@@ -13,6 +14,7 @@ export const Button = (props: ButtonProps) => {
     disabled,
     children,
     variant = "contained",
+    type,
     ...other
   } = props;
   return (
