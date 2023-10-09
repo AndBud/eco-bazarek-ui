@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, TextField } from ".";
+import { Button, TextAreaField, TextField } from ".";
 import { contact } from "../api";
 import { toast } from "react-toastify";
 
@@ -71,13 +71,15 @@ export const Submit = () => {
           className="w-[690px] mt-[51px] ml-[161px]"
           required={true}
         />
-        <TextField
-          inputProps={{
+        <TextAreaField
+          textAreaProps={{
+            rows: 4,
             value: message,
+            className: "resize-none pt-2",
             onChange: (e) => setMessage(e.target.value),
           }}
           label="Wiadomość"
-          className="w-[690px] h-[123px] mt-[41px] ml-[161px]"
+          className="w-[690px] mt-[41px] ml-[161px]"
         />
       </div>
       ;

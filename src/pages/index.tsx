@@ -4,6 +4,6 @@ export { ProductsPage } from "./ProductsPage";
 export { ContactPage } from "./ContactPage";
 export { PrivacyPolicyPage } from "./PrivacyPolicyPage";
 export { TermsOfUsePage } from "./TermsOfUsePage";
-export { ProfilePage } from "./ProfilePage";
+export { ProfilePage } from "./ProfilePage/ProfilePage";
 export { NotFoundPage } from "./NotFoundPage";
 export { RegistrationPage } from "./RegistrationPage";

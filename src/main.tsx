@@ -11,9 +11,9 @@ import {
   TermsOfUsePage,
 } from "./pages";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage.tsx";
-import { ProfilePage } from "./pages/ProfilePage.tsx";
+import { ProfilePage } from "./pages/ProfilePage/ProfilePage.tsx";
 import { NotFoundPage } from "./pages/NotFoundPage.tsx";
-import { RegistrationPage } from "./pages/RegistrationPage.tsx";
+import { RegistrationPage } from "./pages/RegistrationPage/RegistrationPage.tsx";
 
 const router = createBrowserRouter([
   {

@@ -1,9 +1,10 @@
+import { BASE_URL } from "./consts";
 import wretch from "wretch";
+import { CreateUserProfile, LoginUserResponse, UserProfile } from "./types";
+import axios, { AxiosResponse } from "axios";
 
 export const subscribe = (email: string) =>
-  wretch("https://api-eko-bazarek.azurewebsites.net/api/subscribe").post({
-    email,
-  });
+  wretch(BASE_URL + "/subscribe").post({ email });
 
 export const contact = (
   name: string,
@@ -12,7 +13,7 @@ export const contact = (
   phone?: string,
   message?: string
 ) =>
-  wretch("https://api-eko-bazarek.azurewebsites.net/api/contact").post({
+  wretch(BASE_URL + "/contact").post({
     name,
     email,
     phone,
@@ -21,22 +22,50 @@ export const contact = (
   });
 
 export const loginUser = (email: string, password: string) =>
-  wretch("https://api-eko-bazarek.azurewebsites.net/api/users/login").post({
-    email,
-    password,
+  wretch(BASE_URL + "/users/login").post({ email, password });
+
+export const createUserAxios = (
+  newUser: CreateUserProfile
+): Promise<AxiosResponse<LoginUserResponse, unknown>> =>
+  axios.post(BASE_URL + "/users", newUser);
+
+export const updateUserAxios = (
+  user: UserProfile,
+  token: string
+): Promise<AxiosResponse<LoginUserResponse, unknown>> =>
+  axios.put(BASE_URL + "/users", user, {
+    headers: { Authorization: `Bearer ${token}` },
   });
 
+export const getUserByToken = (
+  token: string
+): Promise<AxiosResponse<UserProfile, unknown>> =>
+  axios.get(BASE_URL + "/users/me", {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+export const changePassowrd = (
+  token: string,
+  oldPassword: string,
+  newPassword: string
+): Promise<AxiosResponse<unknown, unknown>> =>
+  axios.post(
+    BASE_URL + "/users/change-password",
+    { oldPassword, newPassword },
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
+
 export const categoriesTop = () =>
-  wretch(
-    "https://api-eko-bazarek.azurewebsites.net/api/products/categories/top"
-  )
+  wretch(BASE_URL + "/products/categories/top")
     .get()
     .json((json) => {
       return json;
     });
 
 export const productsList = () =>
-  wretch("https://api-eko-bazarek.azurewebsites.net/api/products")
+  wretch(BASE_URL + "/products")
     .get()
     .json((json) => {
       return json;
