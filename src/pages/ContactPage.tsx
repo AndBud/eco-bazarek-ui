@@ -5,7 +5,7 @@ export const ContactPage = () => {
   return (
     <Content title="Contact page">
       <div
-        className="absolute mt-[142px] ml-[691px] h-[202px] w-[514px] bg-white
+        className="absolute mt-[142px] ml-[20%] h-[202px] w-[514px] bg-white
        border-[1px] border-solid border-bazarek-border-light border-r-[4px] z-10
         uppercase text-[20px] font-black text-bazarek-brown-dark
         py-5 px-6"

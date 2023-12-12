@@ -1,6 +1,12 @@
 import { BASE_URL } from "./consts";
 import wretch from "wretch";
-import { CreateUserProfile, LoginUserResponse, UserProfile } from "./types";
+import {
+  Category,
+  CreateUserProfile,
+  LoginUserResponse,
+  ResouceBase,
+  UserProfile,
+} from "./types";
 import axios, { AxiosResponse } from "axios";
 
 export const subscribe = (email: string) =>
@@ -70,3 +76,12 @@ export const productsList = () =>
     .json((json) => {
       return json;
     });
+
+export const getTypes = (): Promise<AxiosResponse<ResouceBase[], unknown>> =>
+  axios.get(BASE_URL + "/products/types", {});
+
+export const getUnits = (): Promise<AxiosResponse<ResouceBase[], unknown>> =>
+  axios.get(BASE_URL + "/products/units", {});
+
+export const getCategories = (): Promise<AxiosResponse<Category[], unknown>> =>
+  axios.get(BASE_URL + "/products/categories", {});
